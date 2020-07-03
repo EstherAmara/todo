@@ -6,19 +6,20 @@ class AddTask extends React.Component {
         super();
 
         this.state = {
-            task: null
+            task: ''
         }
     }
     
     handleChange = e => {
         this.setState({
-            [e.target.name]: e.target.value
+            task: e.target.value
         })
     }
 
     handleSubmit = e => {
         e.preventDefault();
-        this.props.addTask(this.state)
+        this.props.addTask(this.state);
+        this.setState({task: ''})
     }
 
 
@@ -30,6 +31,7 @@ class AddTask extends React.Component {
                         type="text"
                         onChange={this.handleChange}
                         name="task"
+                        value={this.state.task}
                     />
                     <button> Add task </button>
                 </form>
