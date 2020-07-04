@@ -1,0 +1,18 @@
+div form {
+    width: 50%;
+    margin: auto;
+    margin-top: 4%;
+}
+
+div form input {
+    padding: 2%;
+    width: 85%;
+    border: none;
+    border-bottom: 2px solid teal;
+    outline: none;
+}
+div form input:focus {
+    background-color: mintcream;
+    border: 1px solid teal;
+    border-radius: 5px;
+}

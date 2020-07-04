@@ -1,19 +1,23 @@
-import React from 'react'
+import React from 'react';
+
+import './showtask.styles.css';
 
 const ShowTask = ({todo, deleteTask}) => {
-    const task = todo.map(todo => {
-        return (
-            <div key={todo.id}>
-                <div> 
-                    {todo.task} 
-                    <button onClick={() => {deleteTask(todo.id)}}> Delete Task </button>
+    const task = todo
+        .filter(todo => {return (!todo.done)})
+        .map(todo => {
+            return (
+                <div key={todo.id}>
+                    <ul className="todo"> 
+                        <li> {todo.task} </li>
+                        <li onClick={() => {deleteTask(todo.id)}}> Done </li>
+                    </ul>
                 </div>
-            </div>
-        )
-    })
+            )
+        })
 
     return (
-        <div>
+        <div className="all">
             {task}
         </div>
     )

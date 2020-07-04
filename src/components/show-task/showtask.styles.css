@@ -1,0 +1,28 @@
+.all {
+    margin-top: 3%;
+    color: #006666;
+}
+.todo {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 1px;
+}
+.todo li {
+    border: 1px solid #009999;
+    border-radius: 9px;
+    padding: 2%;
+}
+.todo li:first-child{
+    border-right: none;
+    width: 60%;
+}
+.todo li:last-child {
+    border-left: none;
+    width: 20%;
+}
+.todo li:last-child:hover {
+    cursor: pointer;
+    background-color: teal;
+    color: #fef;
+}

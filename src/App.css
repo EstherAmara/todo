@@ -1,0 +1,10 @@
+.title {
+    padding: 3% 0;
+    font-size: 4rem;
+    text-align: center;
+    color: #009999;
+    box-shadow: 2px 2px 5px #339966;
+}
+.title span {
+    color: #00cc99;
+}

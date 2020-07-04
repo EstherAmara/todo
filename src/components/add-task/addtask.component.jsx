@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './addtask.styles.css';
+
 class AddTask extends React.Component {
 
     constructor() {
@@ -33,7 +35,6 @@ class AddTask extends React.Component {
                         name="task"
                         value={this.state.task}
                     />
-                    <button> Add task </button>
                 </form>
             </div>
         )
