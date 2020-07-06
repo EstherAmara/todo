@@ -20,7 +20,7 @@ class AddTask extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        this.props.addTask(this.state);
+        this.state.task.length && this.props.addTask(this.state);
         this.setState({task: ''})
     }
 
@@ -34,6 +34,8 @@ class AddTask extends React.Component {
                         onChange={this.handleChange}
                         name="task"
                         value={this.state.task}
+                        placeholder="Add New Task.."
+                        autoComplete="off"
                     />
                 </form>
             </div>

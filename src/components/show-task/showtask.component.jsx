@@ -3,9 +3,8 @@ import React from 'react';
 import './showtask.styles.css';
 
 const ShowTask = ({todo, deleteTask}) => {
-    const task = todo
-        .filter(todo => {return (!todo.done)})
-        .map(todo => {
+    const task = todo.length ?
+        todo.map(todo => {
             return (
                 <div key={todo.id}>
                     <ul className="todo"> 
@@ -14,7 +13,9 @@ const ShowTask = ({todo, deleteTask}) => {
                     </ul>
                 </div>
             )
-        })
+        }) : (
+            <div className="todo"> You have no task for the day. Yayyy!!!</div>
+        )
 
     return (
         <div className="all">

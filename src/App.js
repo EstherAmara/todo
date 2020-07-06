@@ -10,9 +10,7 @@ class App extends React.Component {
     super();
 
     this.state = {
-      todo: [
-        {task: "eat", id: 1}
-      ]
+      todo: []
     }
   }
 
@@ -39,7 +37,7 @@ class App extends React.Component {
       <div>
         <h1 className="title"> Todo<span>'s</span></h1>
         <ShowTask todo = {this.state.todo} deleteTask = {this.deleteTask} />
-        <AddTask addTask = {this.addTask} />
+        <AddTask addTask = {this.addTask} /> 
       </div>
     )
   }
